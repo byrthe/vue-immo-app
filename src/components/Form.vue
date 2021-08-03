@@ -164,6 +164,13 @@
       <b>{{posts.facade}}</b> facasdes and comes <b>{{posts.pool}}</b>. There is <b>{{posts.terrace}}</b> of <b>{{posts.terraceSurface}}</b>m<sup>2</sup>. The kitchen is <b>{{posts.kitchen}}</b> and the house is <b>{{posts.furnished}}</b>. There is a {{posts.garden}} of <b>{{posts.gardenSurface}}</b>m<sup>2</sup>. The total surface of the property is <b>{{posts.totalSurface}}</b>.
       The condition is <b>{{posts.condition}}</b>. It's located in <b>{{posts.province}}</b></h2>
       </div>
+      <form>  
+        <label for="typo">type</label>
+        <input type="text" name="typo" v-model="typo" style="border: 1px solid blue"/><br>
+        <label for="typo">surface</label>
+        <input type="text" name="surfa" v-model="surfa" style="border: 1px solid blue"/>
+        <button v-on:click="addContent()">add content</button>
+      </form>
     </div>
   </div>
 
@@ -177,6 +184,8 @@ import VueAxios from 'vue-axios'
 export default {
   data(){
     return{
+      typo: '',
+      surfa: '',
       posts: {type: null,
         rooms: null,
         surface: null,
@@ -195,16 +204,16 @@ export default {
     }
   },
   methods: {
-    postData(){
+    addContent(){
       console.log('function called');
+    },
+    postData(e){
+      this.axios.post('https://bappimmo.herokuapp.com/predict', this.posts)
+      .then ((result)=>{
+          console.warn(result);
+      })
+      e.preventDefault();
     }
-    // postData(e){
-    //   this.axios.post('https://bappimmo.herokuapp.com/predict', this.posts)
-    //   .then ((result)=>{
-    //       console.warn(result);
-    //   })
-    //   e.preventDefault();
-    // }
   }
 }
 </script>
