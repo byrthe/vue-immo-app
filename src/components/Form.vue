@@ -1,6 +1,7 @@
 <template>
-    <div class="mt-10 sm:mt-0">
+    <div class="sm:mt-0">
     <div class="md:grid md:grid-cols-3 md:gap-6">
+      <p>Fill in the form and get an estimation for the current value of your property.</p>
       <!-- <div class="md:col-span-1">
         <div class="px-4 sm:px-0">
           <h3 class="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>
@@ -10,7 +11,7 @@
         </div>
       </div>-->
       <div class="mt-5 md:mt-0 md:col-span-12">
-
+        
         <!-- FORM -->
         <form action="#" method="POST" @submit="postData">
 
@@ -134,7 +135,7 @@
                 <div class="col-span-6 sm:col-span-3">
                   <label for="province" class="block text-sm font-medium text-gray-700">Province</label>
                   <select v-model="posts.province" id="province" name="province" autocomplete="province" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                    <option :value="LUXEMBOURG">Luxembourg</option>
+                    <option>LUXEMBOURG</option>
                     <option :value="HAINAUT">Hainaut</option>
                     <option :value="FLANDRE-OCCIDENTALE">Flandre-Occidentale</option>
                     <option :value="LIEGE">Liege</option>
