@@ -141,11 +141,11 @@
                   <select v-model="Province" id="Province" name="Province" autocomplete="Province" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                     <option value="LUXEMBOURG">Luxembourg</option>
                     <option value="HAINAUT">Hainaut</option>
-                    <option value="FLANDRE-OCCIDENTALE">Flanders Occidentale</option>
-                    <option value="FLANDRE-ORIENTALE">Flanders Orientale</option>
+                    <option value="FLANDRE_OCCIDENTALE">Flanders Occidentale</option>
+                    <option value="FLANDRE_ORIENTALE">Flanders Orientale</option>
                     <option value="LIEGE">Liège</option>
-                    <option value="BRABANT-FLAMAND">Flemish Brabant</option>
-                    <option value="BRABANT-WALLON">Walloon Brabant</option>
+                    <option value="BRABANT_FLAMAND">Flemish Brabant</option>
+                    <option value="BRABANT_WALLON">Walloon Brabant</option>
                     <option value="BRUXELLES">Brussels</option>
                     <option value="ANVERS">Antwerp</option>
                     <option value="LIMBOURG">Limburg</option>
